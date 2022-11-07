@@ -3,7 +3,9 @@ import './Navbar.css'
 import {Link, useNavigate} from 'react-router-dom'
 import imageLogo from '../../images/logo.jpg'
 const Nav=()=>{
-    const data = localStorage.getItem('woner')
+   
+    let data = localStorage.getItem('data')
+    data = JSON.parse(data)
     const navigate = useNavigate()
 
     const logout=()=>{
@@ -16,6 +18,7 @@ const Nav=()=>{
         
         <div>
            <img className='logoStyle' src={imageLogo} alt='Display is missing'/>
+           <img className='log' src={data.image} alt={data.name}/>
            <p className='titleStyle'>Carz</p>
      {
         data ? <ul className='nav-ul'>
@@ -23,7 +26,7 @@ const Nav=()=>{
             <li><Link to='/add'>Add Car</Link></li>
             {/* <li><Link to='/update'>Update Product</Link></li> */}
             <li><Link to='/profile'>Profile</Link></li>
-            <li> <Link onClick={logout} to='/signup'>Logout ( {JSON.parse(data)} )</Link> </li>
+            <li> <Link onClick={logout} to='/signup'>Logout [{data.name}]</Link> </li>
             
         </ul>
         :

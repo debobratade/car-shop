@@ -32,6 +32,7 @@ const Login=()=>{
     
         if(result.auth ){
         localStorage.setItem("woner",JSON.stringify(result.woner.name))
+        localStorage.setItem("data",JSON.stringify(result.woner))
         localStorage.setItem("token",JSON.stringify(result.auth))
         nav('/')
         }else{

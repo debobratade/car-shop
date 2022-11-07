@@ -72,10 +72,10 @@ const ProductList = () => {
       <div className="midlle">
       {
       products.length>0 ? products.map((item, index) => (
-        <ul >
-          <li>
+        <ul key={index}>
+          <li >
             {
-          <div className='card'>
+          <div className='card' >
           <img src={item.image} alt={item.name}/>
           <article> By {item.company}</article>
           <h3>{item.name}</h3>
