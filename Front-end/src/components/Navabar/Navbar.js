@@ -18,7 +18,7 @@ const Nav=()=>{
         
         <div>
            <img className='logoStyle' src={imageLogo} alt='Display is missing'/>
-           <img className='log' src={data.image} alt={data.name}/>
+           {/* <img className='log' src={data.image} alt={data.name}/> */}
            <p className='titleStyle'>Carz</p>
      {
         data ? <ul className='nav-ul'>

@@ -29,6 +29,8 @@ const productGet = async function (req, res) {
    }
 
 }
+
+
 const productSearch = async function (req, res) {
 
    let products =await productModel.find({
